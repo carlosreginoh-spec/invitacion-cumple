@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¡Estás invitado! 🎉</title>
+<style>
+  :root{
+    --fondo:#1a103c;
+    --fondo2:#2b1a5e;
+    --acento:#ffcf3f;      /* dorado */
+    --acento2:#ff5e8a;     /* rosa */
+    --acento3:#4fd1ff;     /* celeste */
+    --texto:#ffffff;
+    --texto-suave:rgba(255,255,255,.75);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Segoe UI', system-ui, -apple-system, sans-serif;
+    background:radial-gradient(circle at 50% -10%, var(--fondo2), var(--fondo) 60%);
+    color:var(--texto);
+    min-height:100vh;
+    overflow-x:hidden;
+    text-align:center;
+  }
+
+  /* ===== Confeti ===== */
+  .confeti{position:fixed;top:-12px;border-radius:2px;pointer-events:none;z-index:1;
+    animation:caer linear infinite;}
+  @keyframes caer{
+    0%{transform:translateY(-5vh) rotate(0deg)}
+    100%{transform:translateY(105vh) rotate(720deg)}
+  }
+
+  main{position:relative;z-index:2;max-width:520px;margin:0 auto;padding:32px 20px 60px}
+
+  /* ===== Hero ===== */
+  .globo{font-size:64px;animation:flotar 3s ease-in-out infinite}
+  @keyframes flotar{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  .pretitulo{
+    letter-spacing:6px;text-transform:uppercase;font-size:13px;
+    color:var(--acento3);margin-top:10px
+  }
+  h1{
+    font-size:clamp(42px,12vw,64px);line-height:1.05;margin:12px 0 4px;
+    background:linear-gradient(90deg,var(--acento),var(--acento2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .edad{
+    display:inline-block;margin-top:10px;padding:8px 22px;border-radius:999px;
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);
+    font-size:18px;color:var(--texto-suave)
+  }
+  .edad b{color:var(--acento)}
+
+  /* ===== Cuenta regresiva ===== */
+  .cuenta{display:flex;justify-content:center;gap:10px;margin:34px 0 8px}
+  .cuenta div{
+    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);
+    border-radius:14px;padding:12px 0;width:74px
+  }
+  .cuenta .num{font-size:28px;font-weight:700;color:var(--acento)}
+  .cuenta .lbl{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--texto-suave)}
+
+  /* ===== Datos ===== */
+  .tarjeta{
+    margin-top:34px;background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.14);border-radius:20px;
+    padding:26px 20px;backdrop-filter:blur(6px)
+  }
+  .dato{display:flex;align-items:center;gap:14px;text-align:left;padding:12px 6px}
+  .dato + .dato{border-top:1px dashed rgba(255,255,255,.15)}
+  .dato .icono{font-size:26px}
+  .dato .titulo{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--acento3)}
+  .dato .valor{font-size:17px;margin-top:2px}
+
+  /* ===== Botones ===== */
+  .btn{
+    display:block;margin:26px auto 0;max-width:340px;
+    padding:16px 28px;border-radius:999px;text-decoration:none;
+    font-size:17px;font-weight:700;color:#1a103c;
+    background:linear-gradient(90deg,var(--acento),var(--acento2));
+    box-shadow:0 8px 24px rgba(255,94,138,.35);
+    transition:transform .15s ease, box-shadow .15s ease
+  }
+  .btn:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 12px 30px rgba(255,94,138,.5)}
+  .btn.secundario{
+    background:transparent;color:var(--texto);
+    border:1px solid rgba(255,255,255,.3);box-shadow:none;font-weight:500
+  }
+
+  .nota{margin-top:30px;font-size:14px;color:var(--texto-suave)}
+  footer{margin-top:44px;font-size:12px;color:rgba(255,255,255,.35)}
+</style>
+</head>
+<body>
+
+<main>
+  <div class="globo">🎈</div>
+  <p class="pretitulo">¡Estás invitado al cumpleaños de</p>
+
+  <!-- 🔧 CAMBIAR: nombre del cumpleañero/a -->
+  <h1>Nombre Aquí</h1>
+
+  <!-- 🔧 CAMBIAR: edad (o borrar esta línea si no se quiere mostrar) -->
+  <div class="edad">¡Cumple <b>XX</b> años! 🎂</div>
+
+  <!-- Cuenta regresiva -->
+  <div class="cuenta">
+    <div><div class="num" id="dias">--</div><div class="lbl">días</div></div>
+    <div><div class="num" id="horas">--</div><div class="lbl">horas</div></div>
+    <div><div class="num" id="mins">--</div><div class="lbl">min</div></div>
+    <div><div class="num" id="segs">--</div><div class="lbl">seg</div></div>
+  </div>
+
+  <div class="tarjeta">
+    <div class="dato">
+      <div class="icono">📅</div>
+      <div>
+        <div class="titulo">Fecha</div>
+        <!-- 🔧 CAMBIAR -->
+        <div class="valor">Sábado 15 de agosto, 2026</div>
+      </div>
+    </div>
+    <div class="dato">
+      <div class="icono">🕒</div>
+      <div>
+        <div class="titulo">Hora</div>
+        <!-- 🔧 CAMBIAR -->
+        <div class="valor">3:00 p.m.</div>
+      </div>
+    </div>
+    <div class="dato">
+      <div class="icono">📍</div>
+      <div>
+        <div class="titulo">Lugar</div>
+        <!-- 🔧 CAMBIAR -->
+        <div class="valor">Dirección del evento, Ciudad</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔧 CAMBIAR: número de WhatsApp para confirmar (formato 57XXXXXXXXXX) -->
+  <a class="btn" href="https://wa.me/570000000000?text=%C2%A1Confirmo%20mi%20asistencia%20al%20cumplea%C3%B1os!%20%F0%9F%8E%89">
+    ✅ Confirmar asistencia
+  </a>
+
+  <!-- 🔧 CAMBIAR: link de Google Maps -->
+  <a class="btn secundario" href="https://maps.google.com" target="_blank">
+    🗺️ Ver cómo llegar
+  </a>
+
+  <p class="nota">¡Te esperamos para celebrar juntos! 🥳</p>
+
+  <footer>Hecho con 💛</footer>
+</main>
+
+<script>
+  // ===== Confeti =====
+  const colores=['#ffcf3f','#ff5e8a','#4fd1ff','#7cffb2','#c98aff'];
+  for(let i=0;i<60;i++){
+    const c=document.createElement('div');
+    c.className='confeti';
+    const s=6+Math.random()*8;
+    c.style.width=s+'px';
+    c.style.height=(s*0.5)+'px';
+    c.style.left=Math.random()*100+'vw';
+    c.style.background=colores[Math.floor(Math.random()*colores.length)];
+    c.style.animationDuration=(4+Math.random()*6)+'s';
+    c.style.animationDelay=(-Math.random()*8)+'s';
+    c.style.opacity=0.4+Math.random()*0.6;
+    document.body.appendChild(c);
+  }
+
+  // ===== Cuenta regresiva =====
+  // 🔧 CAMBIAR: fecha y hora del evento (año, mes-1, día, hora, minutos)
+  const fechaEvento=new Date(2026, 7, 15, 15, 0, 0); // 15 agosto 2026, 3:00 pm
+  function actualizar(){
+    const ahora=new Date();
+    let diff=Math.max(0, fechaEvento-ahora)/1000;
+    const d=Math.floor(diff/86400); diff-=d*86400;
+    const h=Math.floor(diff/3600);  diff-=h*3600;
+    const m=Math.floor(diff/60);
+    const s=Math.floor(diff-m*60);
+    document.getElementById('dias').textContent=d;
+    document.getElementById('horas').textContent=String(h).padStart(2,'0');
+    document.getElementById('mins').textContent=String(m).padStart(2,'0');
+    document.getElementById('segs').textContent=String(s).padStart(2,'0');
+  }
+  actualizar();
+  setInterval(actualizar,1000);
+</script>
+
+</body>
+</html>
