@@ -8,7 +8,7 @@
 <meta property="og:description" content="Sábado 12 de septiembre · 7:00 p.m. · Como en Casa — Salón de Eventos. ¡Acompáñame a celebrar!">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Pacifico&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..900;1,9..144,500..900&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --crema:#faf3e8;
@@ -29,8 +29,8 @@
     overflow-x:hidden;
     background:var(--crema);
   }
-  .display{font-family:'Baloo 2',cursive;font-weight:800;text-transform:uppercase;line-height:1;color:var(--tinta);letter-spacing:1px;text-wrap:balance}
-  .script{font-family:'Pacifico',cursive;font-weight:400;color:var(--fucsia)}
+  .display{font-family:'Fraunces',serif;font-weight:800;text-transform:uppercase;line-height:1;color:var(--tinta);letter-spacing:1px;text-wrap:balance}
+  .script{font-family:'Fraunces',serif;font-style:italic;font-weight:600;color:var(--fucsia)}
   .eyebrow{font-size:11px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--fucsia)}
 
   section{position:relative;overflow:hidden;padding:64px 18px}
@@ -83,7 +83,7 @@
     transition:opacity .5s ease, transform .5s ease;
   }
   #portada.abriendo .sello{opacity:0;transform:translate(-50%,-50%) scale(.6)}
-  .sello .inicial{font-family:'Pacifico',cursive;font-size:38px;color:#fdf3f0;line-height:1;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+  .sello .inicial{font-family:'Fraunces',serif;font-size:38px;color:#fdf3f0;line-height:1;text-shadow:0 1px 2px rgba(0,0,0,.25)}
   .sello .xv{font-size:8px;font-weight:600;letter-spacing:2px;color:#fdf3f0;text-transform:uppercase;margin-top:2px}
   .abrir-txt{font-size:12px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--oscuro);animation:pulsar 2s ease-in-out infinite}
   @keyframes pulsar{0%,100%{opacity:.55}50%{opacity:1}}
@@ -107,13 +107,23 @@
     box-shadow:0 16px 44px rgba(143,52,84,.18);
   }
   .arco-svg{width:100%;max-width:420px;height:auto;display:block;margin:0 auto}
-  .arco-svg text{font-family:'Baloo 2',cursive;font-weight:800;font-size:54px;letter-spacing:4px;fill:var(--tinta)}
+  .arco-svg text{font-family:'Fraunces',serif;font-weight:800;font-size:54px;letter-spacing:4px;fill:var(--tinta)}
   #hero .nombre{font-size:clamp(28px,7.5vw,40px);margin-top:2px;line-height:1.5}
-  #hero .anios{font-size:13px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--dorado);margin-top:10px}
+  #hero .anios{font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--dorado);margin-top:14px;line-height:2}
   .cuenta{display:flex;justify-content:center;gap:10px;margin-top:28px}
   .cuenta > div{background:var(--blanco);border:2px solid var(--palo);border-radius:14px;padding:12px 0;width:70px}
-  .cuenta .num{font-family:'Baloo 2',cursive;font-weight:700;font-size:26px;color:var(--tinta);font-variant-numeric:tabular-nums}
+  .cuenta .num{font-family:'Fraunces',serif;font-weight:700;font-size:26px;color:var(--tinta);font-variant-numeric:tabular-nums}
   .cuenta .lbl{font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--fucsia)}
+
+  /* ================= CARTA (blanco suave) ================= */
+  #carta{background:linear-gradient(180deg,var(--blanco),#fdf4f7)}
+  #carta .comillas{font-family:'Fraunces',serif;font-style:italic;font-size:70px;color:var(--palo);line-height:.6;user-select:none}
+  #carta p.txt{
+    font-size:14.5px;line-height:1.95;color:var(--oscuro);
+    max-width:54ch;margin:18px auto 0;
+  }
+  #carta .firma{font-family:'Fraunces',serif;font-style:italic;font-weight:600;font-size:30px;color:var(--fucsia);margin-top:28px}
+  #carta .firma-label{font-size:11px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--dorado);margin-top:26px}
 
   /* ================= FOTO (blanco + doodles) ================= */
   #foto{background:var(--blanco)}
@@ -148,16 +158,16 @@
     filter:blur(3px);
   }
   .fecha-fila{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:26px}
-  .fcell{font-family:'Baloo 2',cursive;font-weight:700;font-size:clamp(17px,4.5vw,22px);text-transform:uppercase;letter-spacing:3px;color:var(--fucsia)}
+  .fcell{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(17px,4.5vw,22px);text-transform:uppercase;letter-spacing:3px;color:var(--fucsia)}
   .fnum{
-    font-family:'Baloo 2',cursive;font-weight:800;font-size:clamp(64px,17vw,84px);
+    font-family:'Fraunces',serif;font-weight:800;font-size:clamp(64px,17vw,84px);
     color:var(--tinta);line-height:1;padding:0 20px;
     border-left:2px solid var(--palo);border-right:2px solid var(--palo);
   }
-  .fhora{font-family:'Pacifico',cursive;font-size:clamp(24px,6vw,30px);color:var(--fucsia);margin-top:22px}
+  .fhora{font-family:'Fraunces',serif;font-size:clamp(24px,6vw,30px);color:var(--fucsia);margin-top:22px}
   .flugar{margin-top:26px}
   .flugar .titulo{font-size:10px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--fucsia)}
-  .flugar .valor{font-family:'Baloo 2',cursive;font-weight:700;font-size:24px;color:var(--oscuro);margin-top:6px}
+  .flugar .valor{font-family:'Fraunces',serif;font-weight:700;font-size:24px;color:var(--oscuro);margin-top:6px}
   .flugar .extra{font-size:13px;color:var(--tinta);margin-top:2px}
 
   /* ================= LLUVIA DE SOBRES (rosa + sobres cayendo) ================= */
@@ -183,7 +193,7 @@
   .chip{
     display:inline-block;background:var(--crema);border:2px solid var(--palo);
     border-radius:999px;padding:12px 34px;margin-top:16px;
-    font-family:'Baloo 2',cursive;font-weight:700;font-size:22px;color:var(--oscuro);letter-spacing:2px;
+    font-family:'Fraunces',serif;font-weight:700;font-size:22px;color:var(--oscuro);letter-spacing:2px;
   }
   .nota-palo{font-size:14px;color:var(--tinta);margin:18px auto 0;max-width:32ch;line-height:1.7}
   .muestra{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--palo);vertical-align:-2px;margin-right:6px;border:1px solid var(--fucsia)}
@@ -200,12 +210,12 @@
     max-width:520px;margin:0 auto;position:relative;z-index:2;
     padding:46px 24px 50px;box-shadow:0 16px 44px rgba(143,52,84,.18);
   }
-  #llegar .lugar{font-family:'Baloo 2',cursive;font-weight:800;font-size:30px;text-transform:uppercase;color:var(--tinta);margin-top:12px}
+  #llegar .lugar{font-family:'Fraunces',serif;font-weight:800;font-size:30px;text-transform:uppercase;color:var(--tinta);margin-top:12px}
   #llegar .sublugar{font-size:13px;color:var(--tinta);margin-top:4px}
   .btn{
     display:block;max-width:320px;margin:26px auto 0;padding:16px 26px;
     text-decoration:none;border-radius:999px;
-    font-family:'Baloo 2',cursive;font-weight:700;font-size:17px;letter-spacing:1px;
+    font-family:'Montserrat',sans-serif;font-weight:600;font-size:14px;letter-spacing:3px;text-transform:uppercase;
     background:var(--tinta);color:var(--crema);
     box-shadow:0 8px 20px rgba(179,73,107,.35);
     transition:background .25s ease, transform .2s ease, box-shadow .25s ease;
@@ -261,13 +271,26 @@
         <text text-anchor="middle"><textPath href="#curva" startOffset="50%">MIS XV AÑOS</textPath></text>
       </svg>
       <p class="nombre script">Angela Patricia Pérez Palma</p>
-      <p class="anios">· Quince Años ·</p>
+      <p class="anios">¡Celebremos juntos mi gran día!<br>Los 15 años no se repiten ✨</p>
       <div class="cuenta" aria-label="Cuenta regresiva">
         <div><div class="num" id="dias">--</div><div class="lbl">días</div></div>
         <div><div class="num" id="horas">--</div><div class="lbl">horas</div></div>
         <div><div class="num" id="mins">--</div><div class="lbl">min</div></div>
         <div><div class="num" id="segs">--</div><div class="lbl">seg</div></div>
       </div>
+    </div>
+  </section>
+
+  <!-- ================= CARTA ================= -->
+  <section id="carta">
+    <div class="contenido revela">
+      <div class="comillas" aria-hidden="true">“</div>
+      <p class="txt">Con inmensa alegría y gratitud, quiero compartir con ustedes uno de los días más especiales de mi vida.</p>
+      <p class="txt">Hoy doy gracias a Dios por permitirme llegar a este hermoso momento, y agradezco de todo corazón a mi familia, que con su amor, apoyo y dedicación ha hecho posible este sueño. También agradezco a cada una de las personas que, de una u otra forma, han sido parte de mi camino y han llenado mi vida de cariño.</p>
+      <p class="txt">Será un verdadero honor contar con su presencia para celebrar mis quince años, una noche llena de amor, alegría, esperanza y recuerdos inolvidables.</p>
+      <p class="txt">Con mucho cariño, los invito a acompañarme en esta fecha tan especial y a compartir conmigo la felicidad de abrir las puertas a una nueva etapa de mi vida.</p>
+      <p class="firma-label">Con amor</p>
+      <p class="firma">Ángela Pérez Palma</p>
     </div>
   </section>
 
@@ -358,7 +381,7 @@
   <!-- ================= CÓMO LLEGAR ================= -->
   <section id="llegar">
     <div class="panel revela">
-      <p class="eyebrow">Te esperamos en</p>
+      <p class="eyebrow">Confirma tu asistencia</p>
       <div class="lugar">Como en Casa</div>
       <div class="sublugar">Salón de Eventos</div>
       <a class="btn" href="https://maps.app.goo.gl/QNLg8V6m9uzJkbpT9" target="_blank" rel="noopener">📍 Cómo llegar</a>
