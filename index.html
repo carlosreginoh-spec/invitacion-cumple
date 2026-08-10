@@ -129,14 +129,10 @@
   #foto{background:var(--blanco)}
   #foto h2.script{font-size:clamp(34px,9vw,46px);color:var(--palo);line-height:1.4}
   #foto h2 .fuerte{color:var(--fucsia)}
-  .marco-foto{
-    width:min(72%,270px);aspect-ratio:4/5;margin:30px auto 0;position:relative;
-    border-radius:14px;border:3px dashed var(--palo);
-    background:linear-gradient(180deg,#fdf6f8,#faeef2);
-    display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;
+  .foto-angela{
+    display:block;width:min(86%,340px);margin:26px auto 0;
+    filter:drop-shadow(0 16px 34px rgba(210,100,138,.30));
   }
-  .marco-foto .cam{font-size:36px}
-  .marco-foto p{font-size:12px;font-weight:500;color:var(--tinta);max-width:20ch;line-height:1.5}
 
   /* ================= DATOS (marfil + acuarela) ================= */
   #datos{background:var(--crema)}
@@ -316,11 +312,7 @@
     <div class="contenido revela">
       <p class="eyebrow">La protagonista</p>
       <h2 class="script">La <span class="fuerte">quinceañera</span></h2>
-      <!-- 🔧 AQUÍ VA LA FOTO: reemplazar por <img> cuando llegue -->
-      <div class="marco-foto">
-        <span class="cam">📷</span>
-        <p>Aquí irá la foto de Angela</p>
-      </div>
+      <img class="foto-angela" src="foto-angela.webp" alt="Angela Patricia, la quinceañera">
     </div>
   </section>
 
